@@ -1,0 +1,219 @@
+/* Thème 1 */
+.theme-1 {
+    --main-bg-color: hsl(222, 26%, 31%);
+    --toggle-keypad-bg-color: hsl(223, 31%, 20%);
+    --screen-bg-color: hsl(224, 36%, 15%);
+    
+    --del-and-reset-bg-color: hsl(224, 28%, 35%);
+    --del-and-reset-bg-shadow:  hsl(225, 21%, 49%);
+    --text-color:hsl(0, 0%, 100%);
+
+    --red-key-bg-color: hsl(6, 63%, 50%);
+    --red-key-shadow-color: hsl(6, 70%, 34%);
+    
+    --orange-key-bg-color: hsl(30, 25%, 89%);
+    --orange-key-shadow-color: hsl(28, 16%, 65%);
+    
+    --key-shadow-color:hsl(0, 0%, 100%);
+    --white-color: hsl(0, 0%, 100%);
+    --key-color: hsl(221, 14%, 31%);
+    
+}
+
+/* Thème 2 */
+.theme-2 {
+    --main-bg-color: hsl(0, 0%, 90%);
+    --toggle-keypad-bg-color: hsl(0, 5%, 81%);
+    --screen-bg-color: hsl(0, 0%, 93%);
+    
+    --del-and-reset-bg-color: hsl(185, 42%, 37%);
+    --del-and-reset-bg-shadow: hsl(185, 58%, 25%);
+    
+    --red-key-bg-color: hsl(25, 98%, 40%);
+    --red-key-shadow-color: hsl(25, 99%, 27%);
+    
+    --orange-key-bg-color: hsl(45, 7%, 89%);
+    --orange-key-shadow-color: hsl(35, 11%, 61%);
+    
+    --key-color: hsl(60, 10%, 19%);
+    --key-shadow-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 100%);
+}
+
+/* Thème 3 */
+.theme-3 {
+    --main-bg-color: hsl(268, 75%, 9%);
+    --toggle-keypad-bg-color: hsl(268, 71%, 12%);
+    --screen-bg-color: hsl(268, 71%, 12%);
+    
+    --del-and-reset-bg-color: hsl(281, 89%, 26%);
+    --del-and-reset-bg-shadow: hsl(290, 70%, 36%);
+    
+    --red-key-bg-color: hsl(176, 100%, 44%);
+    --red-key-shadow-color: hsl(177, 92%, 70%);
+    
+    --orange-key-bg-color: hsl(268, 47%, 21%);
+    --orange-key-shadow-color: hsl(290, 70%, 36%);
+    
+    --text-color: hsl(0, 0%, 100%);
+    --key-color: hsl(52, 100%, 62%);
+    --white-color: hsl(52, 100%, 62%)
+}
+.attribution{
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+.attribution a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+body {
+    font-weight: 700;
+    background-color: var(--main-bg-color);
+    font-family: 'League Spartan', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    justify-content: space-between;
+}
+
+.container {
+    width: 35%;
+    padding: 20px;
+    margin: 5% auto;
+}
+
+.theme {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.7em;
+    letter-spacing: 5px;
+    margin-bottom: 0.3rem;
+}
+
+.theme p {
+    font-size: 0.7em;
+    align-self: center;
+    text-transform: uppercase;
+}
+
+.toggle-icon {
+    width: 60px;
+    height: 20px;
+    display: flex;
+    cursor: pointer;
+    margin: 0 20px;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: flex-start;
+    background-color: var(--toggle-keypad-bg-color);
+    transition: background-color 0.3s ease;
+}
+
+.toggle-circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--red-key-bg-color);
+    transition: transform 0.3s ease;
+}
+
+.theme-1 .toggle-circle {
+    transform: translateX(20%);
+}
+
+.theme-2 .toggle-circle {
+    transform: translateX(150%);
+}
+
+.theme-3 .toggle-circle {
+    transform: translateX(270%);
+}
+
+.output {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: var(--white-color);
+    background-color: var(--screen-bg-color);
+    font-size: 2em;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.buttons {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--toggle-keypad-bg-color);
+}
+
+main {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.reset-div {
+    display: grid;
+    margin-top: 5%;
+    grid-template-columns: 1fr 1fr;
+}
+.reset, .del {
+    text-transform: uppercase;
+    background-color: var(--del-and-reset-bg-color);
+    border-bottom: 4px solid var(--del-and-reset-bg-shadow);
+}
+.del:hover, .reset:hover{
+    background-color: var(--del-and-reset-bg-shadow);
+}
+.reset, .del,.equal{
+    color: var(--text-color);
+}
+.reset {
+    margin-right: 1rem;
+}
+.key{
+    color: var(--key-color);
+    background-color: var(--orange-key-bg-color);
+    border-bottom: 4px solid var(--orange-key-shadow-color);
+}
+.key, .del, .reset, .equal {
+    font-size: 1.5em;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.key:hover {
+    background-color: var(--key-shadow-color);
+    border-bottom: 4px solid var(--orange-key-shadow-color);
+}
+.equal {
+    background-color: var(--red-key-bg-color);
+    border-bottom: 4px solid var(--red-key-shadow-color);
+}
+.equal:hover{
+    background-color: var(--red-key-shadow-color);
+}
+@media(max-width: 950px){
+    .container{
+        width: 90%;
+    }
+}
